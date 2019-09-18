@@ -18,10 +18,10 @@
         var in2=document.getElementById('in2');
         var btn=document.getElementById('btn');
         btn.onclick=function(){
-            if(isNaN(num1.value||num2.value)==true){
+            if(isNaN(in1.value||in2.value)==true){
 				alert("请输入数字!");
 			}else{
-				var a = parseInt(Number(num1.value) + Number(num2.value));
+				var a = parseInt(Number(in1.value) + Number(in2.value));
 			show.innerHTML = a;
 			}
 				 
