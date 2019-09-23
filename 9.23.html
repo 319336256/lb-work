@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .blue{
+        	background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    
+    <script>
+      var c = document.getElementsByTagName('div');
+      for(i=0;i<c.length;i++){
+        i==2?c[i].className='blue': c[i].style.backgroundColor='red';
+        c[i].style.width='50px';
+        c[i].style.height="50px";
+        c[i].style.display='inline-block';
+        c[i].style.margin='20px';
+      }
+    </script>
+</body>
+<html>
