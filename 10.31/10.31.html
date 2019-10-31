@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery.min.js"></script>
+		<style>
+			#sp{
+				display: inline-block;
+				width: 130px;
+			}
+			input{
+				width: 74px;
+				margin-right: 25px;
+			}
+			b{
+				display: inline-block;
+				width: 70px;
+				height: 25px;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<span id="sp">华为mate30Pro</span><input id="in1" type="number" placeholder="选择数量" οnclick="noFuc(this.value)"/>
+		<span style="margin-right: 20px;">单价：5999</span>
+		<span>合计￥:</span>
+		<b id="b"></b>
+        <br /><br />
+        
+        <span id="sp">小米CC9</span><input id="in2" type="number" placeholder="选择数量" min="0"/>
+        <span style="margin-right: 20px;">单价：4999</span>
+		<span>合计￥:</span>
+		<b id="b1"></b>
+        <br /><br />
+        
+        <div id="he">
+        	<span>共两件商品，合计￥:</span>
+        	<b id="b2"></b>
+        </div>
+        <button id="bu">结算</button>
+		<script>
+			
+            $("#in1,in2").attr("min","0");
+			
+			$('#bu').click(function () {
+			   $("#in1").val()
+			   var a = $("#b").html($('#in1').val() * 5999);
+			   $("#in2").val()
+			   var b = $("#b1").html($('#in2').val() * 4999);
+			   $('#b2').html(Number($('#b').html()) + Number($('#b1').html()));
+			   
+			   if($("#in1").val() == 5){
+            	alert('你可能买不起')
+               }else if($("#in2").val() == 5){
+            	alert('你可能买不起')
+            }
+			})
+		</script>
+	</body>
+</html>
